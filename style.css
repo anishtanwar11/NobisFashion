@@ -1145,7 +1145,9 @@ margin-top: 4px;
     display: flex;
 }
 /*======== Loging Form =============*/
-
+.form-btns a{
+    font-size: 0.7rem;
+}
 .login-form,
 .sign-up-form{
     width: 300px;
