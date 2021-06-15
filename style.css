@@ -1,0 +1,1222 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,700;1,400&family=Rubik:ital,wght@0,400;0,600;0,700;1,700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+/*============  BODY SECTUON ==============*/
+body{
+    width: 100%;
+    background-color: white;
+}
+
+/*============  HOME SECTUON ==============*/
+/*============  NAV-BAR LOGO ==============*/
+.navigation .nav-bar{
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content:space-between;
+    position: fixed;
+    padding: 18px 40px;
+    box-shadow: 0px 2px 10px rgb(57,56,61,0.6);
+    margin-bottom: 20px;
+    z-index: 102;
+    background-color: white;
+}
+.navigation .nav-bar{
+    display: flex;
+    justify-content: space-between;
+}
+.navigation .nav-bar .logo h3{
+    font-family: 'Rubik',sans-serif;
+    font-size: 1.5rem;
+    color: #10B981;
+}
+.navigation .nav-bar .logo p{
+    font-family: 'Poppins',sans-serif;
+    font-size: .7rem;
+    font-weight: bold;
+    letter-spacing: 4px;
+    display: flex;
+    justify-content: center;
+}
+
+/*============  NAV-BAR LINKS ==============*/
+/*============  NAV-BAR ICONS ==============*/
+/*------- Similar Section  -------*/
+.navigation .nav-bar .nav-links{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+.navigation .nav-bar .nav-links,
+.navigation .nav-bar .nav-icons{
+    margin-top: 12px;
+}
+
+.navigation .nav-bar .nav-links ul{
+    font-family: 'Rubik',sans-serif;
+    position: relative;
+}
+.navigation .nav-bar .nav-icons li,
+.navigation .nav-bar .nav-links ul li{
+    text-decoration: none;
+    display: inline-block;
+   
+}
+
+.navigation .nav-bar .nav-icons li a,
+.navigation .nav-bar .nav-links ul li a{
+    font-weight: 600;
+    color: #6EE7B7;
+    margin-left: 9px;
+    transition: 0.3s ease;
+}
+/*------- Similar Hover effact -------*/
+.navigation .nav-bar .nav-icons li a:hover,
+.navigation .nav-bar .nav-links ul li a:hover{
+    color: #10B981;
+    transition: all .3s ease;
+}
+
+/*============== SEARCH BAR =======================*/
+.search-bar{
+    width: 100%;
+    height: 300px;
+    background-color: #ffffff;
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+    display: flex;
+    justify-content: center;
+    box-shadow: 2px -5px 30px rgb(0, 0, 0,0.1);
+    z-index: 101;
+    animation: search 0.3s;
+}
+.search-input{
+    width: 90%;
+    border-bottom: 2px solid #555555;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    margin-top: 20px;
+}
+.search-bar input{
+    width: 100%;
+    padding: 30px;
+    border: none;
+    outline: none;
+    font-size: 2rem;
+    margin: 20px;
+    padding: 0px 20px;
+}
+.search-cancel{
+    color: black;
+    font-size: 2rem;
+    padding-right: 40px;
+
+}
+.form-cancle:hover,
+.search-cancel:hover{
+    color: #10B981;
+    transition: all 0.3s ease;
+}
+.search-bar{
+    display: none;
+}
+.search-bar-active{
+    display: flex;
+}
+@keyframes search{
+    0%{
+        bottom: -300px;
+    }
+    100%{
+        bottom: 0px;
+    }
+}
+
+/* Loging Form ================*/
+.form{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background-color: rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 102;
+}
+.login-form,
+.sign-up-form{
+    width: 420px;
+    padding: 20px 10px;
+    background-color: #ffffff;
+    box-shadow: 2px 2px 30px rgb(0, 0, 0,0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 5px;
+    position: relative;
+}
+.login-form form,
+.sign-up-form form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+.login-form strong,
+.sign-up-form strong{
+    color: #272727;
+    font-size: 2rem;
+    margin: 2px 7px 7px 7px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-family: 'Poppins',sans-serif;
+    font-weight: 500;
+}
+.login-form input,
+.sign-up-form input{
+    width: 90%;
+    height: 45px;
+    margin: 6px 0px;
+    padding: 0px 10px;
+    border: 1px solid rgb(0, 0, 0,0.1);
+    outline: none;
+    border-radius: 7px;
+}
+.login-form input::placeholder,
+.sign-up-form input::placeholder{
+    color: rgba(0, 0, 0, 0.5);
+}
+.login-form input[type="submit"],
+.sign-up-form input[type="submit"]{
+    background-color: #10B981;
+    color: #ffffff;
+    border: none;
+    text-transform: uppercase;
+    margin-top:10px;
+    border-radius: 3px;
+    box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.1);
+}
+/*====== Create account--Sign up =====*/
+.form-btns{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+.form-btns a{
+    color: #4d4d4d;
+    font-size: 0.9rem;
+
+}
+.sign-up-btn{
+    border-bottom: 1px solid #868686;
+    line-height: 16px;
+}
+/*cancle btn*/
+.form-cancle{
+   position: absolute;
+   right: 20px;
+   top: 10px;
+   color: #868686;
+}
+.login-form,
+.sign-up-form,
+.form{
+    display: none;
+}
+
+.login-active,
+.login-active .login-form{
+    display: flex;
+    animation: fade 0.3s;
+}
+
+.sign-up-active,
+.sign-up-active .sign-up-form{
+    display: flex;
+    animation: fade 0.3s;
+}
+@keyframes fade{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+
+
+/*================= SLIDER CATEGORIES ===========================*/
+.slider{
+    overflow: hidden;
+    margin-top: 80px;
+}
+.slider figure{
+    position: relative;
+    width: 500%;
+    margin: 0;
+    left: 0;
+    animation: 20s slider infinite;
+}
+.slider figure img{
+    width: 20%;
+    float: left;
+}
+
+@keyframes slider {
+    0%{
+        left: 0;
+    }
+    20%{
+        left: 0;
+    }
+    25%{
+        left: -100%;
+    }
+    45%{
+        left: -100%;
+    }
+    50%{
+        left:-200%
+    }
+    70%{
+        left: -200%;
+    }
+    75%{
+        left: -300%;
+    }
+    95%{
+        left: -300%;
+    }
+    100%{
+        left: -400%;
+    }
+}
+/*================= FEATURED CATEGORIES ===========================*/
+
+.featured-gallery .titel{
+    display: flex;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+.featured-gallery .titel h3{
+    background-color: #10B981;
+    color: white;
+    padding: 4px 10px;
+    font-family: 'Poppins',sans-serif;
+}
+.featured-gallery .featured-items{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    
+}
+/*----features cards-----*/
+/*---- card 1 ----*/
+.featured-gallery .featured-wrap1{
+    height: 190px;
+    width: 150px;
+    background-color: #6EE7B7;
+    margin-bottom: 15px;
+}
+
+.featured-gallery .featured-wrap1:hover{
+    box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.36);
+}
+.featured-gallery .featured-wrap1 img{
+    height: 150px;
+    width: 110px;
+    margin-top: 3px;
+    margin-left: 18px;
+}
+.featured-gallery .featured-wrap1 p{
+    background-color: white;
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    padding: 7px;
+}
+
+
+/*---- card 2 ----*/
+.featured-gallery .featured-wrap2{
+    height: 190px;
+    width: 150px;
+    background-color: #E5E7EB;
+    margin-bottom: 15px;
+}
+.featured-gallery .featured-wrap2:hover{
+    box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.36);
+}
+.featured-gallery .featured-wrap2 img{
+    height: 150px;
+    width: 110px;
+    margin-top: 3px;
+    margin-left: 20px;
+}
+.featured-gallery .featured-wrap2 p{
+    background-color: white;
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    padding: 7px;
+}
+
+/*---- card 3 ----*/
+.featured-gallery .featured-wrap3{
+    height: 190px;
+    width: 150px;
+    background-color: #FEF08A;
+    margin-bottom: 15px;
+}
+.featured-gallery .featured-wrap3:hover{
+    box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.36);
+}
+.featured-gallery .featured-wrap3 img{
+    height: 150px;
+    width: 110px;
+    margin-top: 3px;
+    margin-left: 20px;
+}
+.featured-gallery .featured-wrap3 p{
+    background-color: white;
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    padding: 7px;
+}
+
+/*---- card 4 ----*/
+.featured-gallery .featured-wrap4{
+    height: 190px;
+    width: 150px;
+    background-color: #FBCFE8;
+    margin-bottom: 15px;
+}
+.featured-gallery .featured-wrap4:hover{
+    box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.36);
+}
+.featured-gallery .featured-wrap4 img{
+    height: 150px;
+    width: 110px;
+    margin-top: 3px;
+    margin-left: 20px;
+}
+.featured-gallery .featured-wrap4 p{
+    background-color: white;
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    padding: 7px;
+}
+
+/*---- card 5 ----*/
+.featured-gallery .featured-wrap5{
+    height: 190px;
+    width: 150px;
+    background-color: #FEF3C7;
+    margin-bottom: 15px;
+}
+.featured-gallery .featured-wrap5:hover{
+    box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.36);
+}
+.featured-gallery .featured-wrap5 img{
+    height: 150px;
+    width: 110px;
+    margin-top: 3px;
+    margin-left: 20px;
+}
+.featured-gallery .featured-wrap5 p{
+    background-color: white;
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    padding: 7px;
+}
+
+/*---- card 6 ----*/
+.featured-gallery .featured-wrap6{
+    height: 190px;
+    width: 150px;
+    background-color: #A5F3FC;
+    margin-bottom: 15px;
+}
+.featured-gallery .featured-wrap6:hover{
+    box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.36);
+}
+.featured-gallery .featured-wrap6 img{
+    height: 150px;
+    width: 110px;
+    margin-top: 3px;
+    margin-left: 20px;
+}
+.featured-gallery .featured-wrap6 p{
+    background-color: white;
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    padding: 7px;
+}
+
+/*================= ARRIVAL CATEGORIE ===========================*/
+/*------heading-------*/
+.new-arrivals{
+    width: 100%;
+    background-color: white;
+}
+.new-arrivals .title{
+    display: flex;
+    justify-content: center;
+    margin: 40px 0 0 0;
+}
+.new-arrivals .title h3{
+    background-color: #60A5FA;
+    color: white;
+    padding: 4px 8px;
+    font-size: 1.2rem;
+    font-family: 'Poppins' , sans-serif;
+}
+.new-arrivals .arrival-items{
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    padding: 0 100px;
+}
+.new-arrivals .arrival-items .arrival-wrap{
+    height: 240px;
+    width:  180px;
+    background-color: white;
+    margin-bottom: 15px;
+    box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.15);
+    
+}
+
+.new-arrivals .arrival-items .arrival-wrap:hover .card-shop{
+    display: inline;
+    
+}
+.new-arrivals .arrival-items .arrival-wrap figure{
+    display: flex;
+    justify-content: center;
+margin-top: 4px;
+}
+.new-arrivals .arrival-items .arrival-wrap img{
+    height: 170px;
+    width: 140px;
+}
+.new-arrivals .arrival-wrap .text{
+    margin-top: 15px;
+    background-color: white;
+}
+.new-arrivals .arrival-wrap p{
+    display: flex;
+    justify-content: center;
+    padding: 4px;
+}
+.new-arrivals .arrival-wrap h5{
+    display: flex;
+    justify-content: center;
+    padding: 2px;
+}
+.card-shop{
+    background-color: #6EE7B7;
+    padding: 0.8rem;
+    border-radius: 50%;
+    position: absolute;
+    margin-top: 12px;
+    margin-left: 120px;
+    display: none;
+}
+.card-shop i{
+    font-size: 1.4rem;
+    color: white;
+}
+
+/*================== SUMMER BANNER ===========================*/
+
+.summer-banner{
+    width: 100%;
+    margin-top: 40px;
+    background-image: url("banner367.jpg");
+    height: 400px;
+    position: relative;
+    overflow-y: hidden;
+    background-position: center;
+    background-size: cover;
+    
+    flex-wrap: wrap;
+}
+
+.summer-banner .max-width .babber-tittle h3{
+    font-size: 3rem;
+    font-family: 'Poppins',sans-serif;
+    color: white;
+    display: flex;
+    justify-content: center;
+    margin-top: 70px;
+}
+.summer-banner .max-width .babber-tittle .heading{
+    display: flex;
+    justify-content: center;
+}
+.summer-banner .max-width .babber-tittle .heading p{
+    font-size: 2rem;
+    font-family: 'Ubuntu',sans-serif;
+    font-weight: 800;
+    color: white;
+}
+.summer-banner .max-width .babber-tittle .button{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-top: 20px;
+}
+.summer-banner .max-width .babber-tittle button{
+    padding: 6px 20px;
+    background-color: #10B981;
+    color: white;
+    font-family: 'Poppins',sans-serif;
+    cursor: pointer;
+    border: 2px solid #10B981;
+    font-size: 1.3rem;
+}
+
+/*==================== Features Section =================*/
+
+.features{
+    width: 100%;
+    padding: 50px;
+}
+.features .features-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    
+}
+.features .features-container .feature-wrap{
+    width: 260px;
+    height: 130px;
+    background-color: white;
+    box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.15);
+    padding: 10px;
+    
+}
+.features .features-container .feature-wrap i{
+    color: #10B981;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    font-size: 2rem;
+}
+
+.features .features-container .feature-wrap h3{
+    display: flex;
+    justify-content: center;
+    color: #10B981;
+    font-size: 1.5rem;
+    font-family: 'Poppins',sans-serif;
+}
+.features .features-container .feature-wrap p{
+    display: flex;
+    justify-content: center;
+    color: black;
+    font-size: .9rem;
+    font-family: 'Poppins',sans-serif;
+}
+
+/*==================== Subscribe Section =================*/
+.subscribe{
+    width: 100%;
+    background-color:#6EE7B7;   
+}
+
+.subscribe .container{
+    padding: 30px;
+}
+.subscribe .container .newsletter{
+    display: flex;
+    justify-content: center;
+}
+.subscribe .container .newsletter p{
+    font-size: 1.8rem;
+    color: white;
+    font-family: 'Poppins',sans-serif;
+    font-weight: bold;
+}
+.subscribe .container .email{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: .7rem;
+}
+.subscribe .container .email input{
+    border-style: none;
+    padding: 10px 12px;
+    margin-right: 6px;
+    width: 20rem;
+    height: 2.5rem;
+    border: none;
+    outline: none;
+}
+.subscribe .container .email button{
+    padding: 3px 13px;
+    background-color: #10B981;
+    color: white;
+    font-family: 'Poppins',sans-serif;
+    cursor: pointer;
+    border: 2px solid #10B981;
+    font-size: .8rem;
+    width: 10rem;
+    height: 2.5rem;
+    cursor: pointer;
+}
+/*-------------- FOOTER SECTION ----------------*/
+.footer .footer-info{
+    width: calc(40% - 20%);
+  }
+  
+.footer{
+    width: 100%;
+}
+
+.footer .social-links{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding: 10px;
+    background-color: white;
+}
+.footer .social-links a{
+    font-size: 18px;
+    display: inline-block;
+    color: white;
+    line-height: 1;
+    padding: 8px 0;
+    margin-right: 8px;
+    border-radius: 50%;
+    text-align: center;
+    width: 36px;
+    height: 36px;
+    transition: 0.3s ease;
+    background:#10B981;
+}
+.footer  .social-links a:hover{
+    color: #10B981;
+    background: white;
+    border: 2px solid #10B981;
+}
+
+.footer .footer-container{
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    background-color: #6EE7B7;
+    padding: 20px 0px;
+}
+.footer .footer-container h3::before,
+.footer .footer-container h3::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  margin-bottom: 8px;
+}
+
+.footer .footer-container  h3{
+    font-family: 'Poppins',sans-serif;
+    color: white;
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+}
+.footer .footer-container .footer-about p{
+    font-family: 'Ubuntu',sans-serif;
+    color: white; 
+    font-size: 20px;
+    line-height:1;
+    margin-bottom: 0;
+}
+.footer .footer-container ul li{
+    text-decoration: none;
+    color: white;
+}
+.footer .footer-container li a{
+    text-decoration: none;
+    color: white;
+    font-family: 'Poppins',sans-serif;
+    font-weight: bold;
+   
+}
+.footer .footer-container li a:hover{
+    transition: all .3s ease;
+    color: #10B981;
+}
+.footer .footer-container li{
+    border-bottom: 1px solid white;
+    margin-bottom: 6px;
+}
+
+
+/* Contact Section */
+.footer .footer-container .contact i{
+    color: white;
+}
+.footer .footer-container .contact .fa{
+    font-size: 25px;
+    display: flex;
+    justify-content: left;
+}
+.footer .footer-container .contact .phone,
+.footer .footer-container .contact .email,
+.footer .footer-container .contact .address{
+    display: flex;
+    margin-top: 8px;
+}
+.footer .footer-container .contact .phone p,
+.footer .footer-container .contact .email p,
+.footer .footer-container .contact .address p{
+    color: white;
+    margin-left: 10px;
+    font-family: 'Poppins' , sans-serif;
+    font-weight:400;
+}
+
+/*   Copyright section   */
+.footer .container{
+    width: 100%;
+    background-color: #10B981;
+    padding: 10px;
+}
+.container .copyright{
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 1rem;
+    font-family: 'Poppins',sans-serif;
+}
+.container .credits{
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 1rem;
+    font-family: 'Poppins',sans-serif;
+}
+
+
+
+  /*============================================================
+  RESPONSIVE CODE FOR 420PX                                   
+  ============================================================*/
+  .nav-bar .burgur{
+    display: none;
+}
+
+  @media(max-width:590px){
+     
+    body{
+        width: 100%;
+        background-color: white;
+    }
+    .slider{
+        margin-top: 71px;
+    }
+        /*--- nav bar ---*/
+
+        .navigation .nav-bar .logo h3{
+            font-family: 'Rubik',sans-serif;
+            font-size: 1.1rem;
+            color: #10B981;
+        }
+        .navigation .nav-bar .logo p{
+            font-family: 'Poppins',sans-serif;
+            font-size: .6rem;
+            font-weight: bold;
+            letter-spacing: 3px;
+        }
+
+        .navigation .nav-bar{
+            padding: 15px 25px;
+            width: 100%;
+    
+        }
+        .navigation .nav-bar .nav-icons{
+            margin-right: 40px;
+            margin-bottom: 10px;
+        }
+        .navigation .nav-bar .nav-icons li a{
+            font-weight: 600;
+            color: #6EE7B7;
+            margin-left: 2px;
+        }
+        
+        .navigation .nav-bar .nav-icons li a:hover{
+            color: #10B981;
+        }
+        .burgur .fa-bars{
+            margin-right: 10px;
+            margin-top:15px; 
+            position: absolute;
+            right: 20px;
+            top: 10px;
+        }
+        .nav-bar .burgur{
+            
+            display: block;
+            color: black;
+            margin: 10px 25px;
+            font-size: 22px;
+            cursor: pointer;
+           
+        }
+        .nav-bar .burgur:hover{
+            color: black ;
+        }
+        .nav-links{
+            top: 0;
+            height: 100vh;
+            width: 200px;
+            background: #10B981;
+            right: -300px;
+            position: absolute;
+            justify-content: left;
+            z-index: 1;
+           
+        }
+        .nav-links ul li {
+            display: flex;
+            flex-direction: column; 
+            margin-top: 20px;
+            margin-right: 30px;
+        }
+       
+        .navigation .nav-bar .nav-links ul li a{
+            font-weight: 600;
+            color: white;
+            margin-left: 9px;
+            transition: 0.3s ease;
+        }
+        /*------- Similar Hover effact -------*/
+     
+        .navigation .nav-bar .nav-links ul li a:hover{
+            color: #6EE7B7;
+            
+        }
+
+        /*================= FEATURED CATEGORIES ===========================*/
+
+.featured-gallery .titel{
+    display: flex;
+    justify-content: center;
+    font-size: 1rem;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+.featured-gallery .titel h3{
+    background-color: #10B981;
+    color: white;
+    padding: 4px 7px;
+    font-family: 'Poppins',sans-serif;
+}
+.featured-gallery .featured-items{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+.featured-gallery .featured-wrap1{
+    height: 190px;
+    width: 150px;
+    background-color: #6EE7B7;
+    margin-bottom: 15px;
+    
+}
+.featured-gallery .featured-wrap2{
+    height: 190px;
+    width: 150px;
+    background-color: #E5E7EB;
+    margin-bottom: 15px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+.featured-gallery .featured-wrap3{
+    height: 190px;
+    width: 150px;
+    background-color: #FEF08A;
+    margin-bottom: 15px;
+    margin-right: 5px;
+}
+.featured-gallery .featured-wrap4{
+    height: 190px;
+    width: 150px;
+    background-color: #FBCFE8;
+    margin-bottom: 15px;
+    margin-left: 5px;
+}
+.featured-gallery .featured-wrap5{
+    height: 190px;
+    width: 150px;
+    background-color: #FEF3C7;
+    margin-bottom: 15px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+.featured-gallery .featured-wrap6{
+    height: 190px;
+    width: 150px;
+    background-color: #A5F3FC;
+    margin-bottom: 15px;
+}
+
+.summer-banner{
+    height: 300px;
+}
+
+
+
+
+/*================= FEATURED CATEGORIES ===========================*/
+.new-arrivals .arrival-items{
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    padding: 0 0px;
+}
+/*---------banner--------*/
+.summer-banner .max-width .babber-tittle h3{
+    font-size: 1.5rem;
+    font-family: 'Poppins',sans-serif;
+    color: white;
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+.summer-banner .max-width .babber-tittle .heading p{
+    font-size: 1rem;
+    font-family: 'Ubuntu',sans-serif;
+    font-weight: 800;
+    color: white;
+    margin-top: 10px;
+}  
+.summer-banner .max-width .babber-tittle button{
+    padding: 4px 15px;
+    background-color: #10B981;
+    color: white;
+    font-family: 'Poppins',sans-serif;
+    cursor: pointer;
+    border: 2px solid #10B981;
+    font-size: 1rem;
+}
+/*========== Subscribe =============*/
+
+.subscribe .container .newsletter{
+    display: flex;
+    justify-content: left;
+}
+.subscribe .container .newsletter p{
+    font-size: 1.1rem;
+    color: white;
+    font-family: 'Poppins',sans-serif;
+    font-weight: bold;
+}
+.subscribe .container .email{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    
+    margin-top: .7rem;
+}
+
+.subscribe .container .email input{
+    border-style: none;
+    padding: 8px 12px;
+    margin-right: 6px;
+    width: 100%;
+    height: 2rem;
+    border: none;
+    outline: none;
+}
+.subscribe .container .email button{
+    padding: 3px 10px;
+    background-color: #10B981;
+    color: white;
+    font-family: 'Poppins',sans-serif;
+    cursor: pointer;
+    border: 2px solid #10B981;
+    font-size: .6rem;
+    width: 7rem;
+    height: 2rem;
+    cursor: pointer;
+    margin-top: 8px;
+   
+}
+/*================== Footer Section ===============*/
+
+.footer .footer-info{
+    width: 100%;
+  }
+
+.footer .footer-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    background-color: #6EE7B7;
+    padding: 20px 35px;
+}
+.footer .footer-container .shop h3,
+.footer .footer-container .contact h3,
+.footer .footer-container .quick-links h3{
+    font-family: 'Poppins',sans-serif;
+    color: white;
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    margin-top: 15px;
+}
+/*================== Copyright Section ===============*/
+.container .copyright{
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: .7rem;
+    font-family: 'Poppins',sans-serif;
+}
+.container .credits{
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: .7rem;
+    font-family: 'Poppins',sans-serif;
+}
+/* ========= Features ==============*/
+.features .features-container .feature-wrap{
+    margin-top: 15px;
+}
+/* ========= search  ==============*/
+.search-bar input{
+    width: 100%;
+    padding: 30px;
+    border: none;
+    outline: none;
+    font-size: 2rem;
+    margin: 20px;
+    padding: 0px 20px;
+}
+.search-cancel{
+    color: black;
+    font-size: 2rem;
+    padding-right: 40px;
+
+}
+.form-cancle:hover,
+.search-cancel:hover{
+    color: #10B981;
+    transition: all 0.3s ease;
+}
+.search-bar{
+    display: none;
+}
+.search-bar-active{
+    display: flex;
+}
+/*======== Loging Form =============*/
+
+.login-form,
+.sign-up-form{
+    width: 300px;
+    padding: 20px 10px;
+    background-color: #ffffff;
+    box-shadow: 2px 2px 30px rgb(0, 0, 0,0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 5px;
+    position: relative;
+}
+.login-form form,
+.sign-up-form form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+.login-form strong,
+.sign-up-form strong{
+    color: #272727;
+    font-size: 2rem;
+    margin: 2px 7px 7px 7px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-family: 'Poppins',sans-serif;
+    font-weight: 500;
+}
+.login-form input,
+.sign-up-form input{
+    width: 90%;
+    height: 45px;
+    margin: 6px 0px;
+    padding: 0px 10px;
+    border: 1px solid rgb(0, 0, 0,0.1);
+    outline: none;
+    border-radius: 7px;
+}
+.login-form input::placeholder,
+.sign-up-form input::placeholder{
+    color: rgba(0, 0, 0, 0.5);
+}
+.login-form input[type="submit"],
+.sign-up-form input[type="submit"]{
+    background-color: #10B981;
+    color: #ffffff;
+    border: none;
+    text-transform: uppercase;
+    margin-top:10px;
+    border-radius: 3px;
+    box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.1);
+}
+.login-form,
+.sign-up-form,
+.form{
+    display: none;
+}
+
+.login-active,
+.login-active .login-form{
+    display: flex;
+    animation: fade 0.3s;
+}
+
+.sign-up-active,
+.sign-up-active .sign-up-form{
+    display: flex;
+    animation: fade 0.3s;
+}
+
+}
